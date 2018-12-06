@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">GeoCoding</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyDY_74DRepeRDDaAKMt6YFaIrp1wzAbh8s</string>
+
+    <string name="city_item_country">- Country: %s</string>
+    <string name="city_item_province">- Province: %s</string>
+    <string name="city_item_population">- Population: %s</string>
+    <string name="city_item_iso2">- Iso2: %s</string>
+    <string name="city_item_iso3">- Iso3: %s</string>
+
+    <string name="search_cities_hint">Search cities</string>
+
+    <string name="input_city_hint">Input city name</string>
+
+    <string name="save_city">Save city</string>
+
+    <string name="save_city_warning">City already in the list.</string>
+    <string name="save_city_message_success">City is added to the list.</string>
+    <string name="save_city_dialog_title">Are you sure that you want to add this city to the list?</string>
+
+</resources>

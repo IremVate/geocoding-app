@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="actions"
+            type="challenge.gecoding.commands.SaveCityActions"/>
+
+        <variable
+            name="cityData"
+            type="challenge.gecoding.models.CityModel"/>
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_normal_2">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edit_text_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_city_hint"
+            android:imeOptions="actionDone"
+            android:text="@{cityData.city}"
+            android:enabled="false"
+            android:textColor="@android:color/white"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/save_city"
+            android:onClick="@{()->actions.saveCity()}"
+            android:layout_alignParentBottom="true"/>
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/edit_text_city"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button_save"
+            tools:context=".details.CityDetailsActivity" />
+
+    </RelativeLayout>
+
+</layout>
